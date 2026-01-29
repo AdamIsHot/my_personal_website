@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from muj_web.views import domovska_stranka
+from muj_web.views import muj_art
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', domovska_stranka),
+    path('art/', muj_art, name='art'),
 ]
